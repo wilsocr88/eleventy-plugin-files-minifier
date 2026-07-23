@@ -1,7 +1,7 @@
-const htmlmin = require("html-minifier");
+const { minify } = require("html-minifier-terser");
 const { pd: prettyData } = require("pretty-data");
 
-module.exports = (value, outputPath) => {
+module.exports = async (value, outputPath) => {
   // Make sure that there is a file written before trying to minifying it
   if (!outputPath) {
     return value;
@@ -36,7 +36,7 @@ module.exports = (value, outputPath) => {
       config.keepClosingSlash = true;
     }
 
-    return htmlmin.minify(value, config);
+    return minify(value, config);
   }
 
   // JSON and WebManifest

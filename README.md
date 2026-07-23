@@ -9,7 +9,7 @@ even if some of them maybe some bots.
 Under the hood, this plugin use the following plugins to minify code:
 
 - [pretty-data](https://www.npmjs.com/package/pretty-data): `css`, `json`, `xml` and `webmanifest`
-- [html-minifier](https://www.npmjs.com/package/html-minifier): `html` and `xsl`
+- [html-minifier-terser](https://www.npmjs.com/package/html-minifier-terser): `html` and `xsl`
 
 ## Installation
 
