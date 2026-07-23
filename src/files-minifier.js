@@ -22,6 +22,7 @@ module.exports = (value, outputPath) => {
       collapseWhitespace: true, // Collapse white space that contributes to text nodes in a document tree
       decodeEntities: true, // Use direct Unicode characters whenever possible
       html5: true, // Parse input according to HTML5 specifications
+      ignoreCustomComments: [/^ELEVENTYEDGE_/, /^\/ELEVENTYEDGE_/], // Preserve Eleventy Edge placeholders stored in HTML comments
       minifyCSS: true, // Minify CSS in style elements and style attributes (uses clean-css)
       minifyJS: true, // Minify JavaScript in script elements and event attributes (uses UglifyJS)
       removeComments: true, // Strip HTML comments

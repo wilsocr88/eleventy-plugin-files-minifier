@@ -32,6 +32,8 @@ module.exports = (eleventyConfig) => {
 
 The plugin will automatically minify supported files, you don't need to do anything except the installation!
 
+For HTML output, the plugin preserves Eleventy Edge placeholder comments such as `<!--ELEVENTYEDGE_*-->` so Edge-rendered regions are not removed during minification.
+
 Make sure that the files you want to minify are currently written by Eleventy. If not, you can easily rename it and add
 Front matter options. For example, for the `manifest.webmanifest` file, I could rename it as `manifest.webmanifest.njk`
 and add the following code at his top:
